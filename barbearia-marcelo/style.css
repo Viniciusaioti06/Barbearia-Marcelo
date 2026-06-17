@@ -51,23 +51,61 @@ ul { list-style: none; }
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
   color: white;
-  font-weight: 800;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .brand img {
-  width: 56px;
-  height: 56px;
+  width: 58px;
+  height: 58px;
   border-radius: 50%;
   object-fit: contain;
   background: #000;
-  border: 2px solid rgba(201,164,92,.55);
-  padding: 2px;
+  border: 2px solid rgba(201,164,92,.50);
+  padding: 3px;
+  box-shadow: 0 0 0 4px rgba(201,164,92,.08);
+  transition: box-shadow .3s ease, border-color .3s ease;
 }
 
-.brand span { letter-spacing: .5px; }
+.brand:hover img {
+  border-color: rgba(201,164,92,.90);
+  box-shadow: 0 0 0 6px rgba(201,164,92,.14);
+}
+
+.brand-divider {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(to bottom, transparent, rgba(201,164,92,.55), transparent);
+  flex-shrink: 0;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.brand-name {
+  font-family: Cinzel, serif;
+  font-size: .95rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  color: white;
+  line-height: 1;
+}
+
+.brand-sub {
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1;
+}
+
+
 
 .nav-menu {
   display: flex;
@@ -228,17 +266,31 @@ ul { list-style: none; }
   max-width: 860px;
 }
 
-.hero-logo {
-  width: 200px;
-  margin: 0 auto 22px;
+.hero-logo-wrap {
+  width: clamp(170px, 46vw, 220px);
+  height: clamp(170px, 46vw, 220px);
   border-radius: 50%;
   border: 3px solid rgba(201,164,92,.55);
   box-shadow: 0 0 0 8px rgba(201,164,92,.10), 0 24px 56px rgba(0,0,0,.55);
+  background: #000;
+  margin: 0 auto 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
   transition: box-shadow .4s ease;
 }
 
-.hero-logo:hover {
+.hero-logo-wrap:hover {
   box-shadow: 0 0 0 14px rgba(201,164,92,.14), 0 28px 64px rgba(0,0,0,.55);
+}
+
+.hero-logo {
+  width: 92%;
+  height: 92%;
+  object-fit: contain;
+  border-radius: 0;
+  display: block;
 }
 
 .eyebrow,
@@ -720,7 +772,7 @@ h2 {
 @media (max-width: 560px) {
   .section { padding: 64px 0; }
 
-  .hero-logo { width: 160px; }
+  .hero-logo-wrap { width: clamp(150px, 42vw, 200px); height: clamp(150px, 42vw, 200px); }
 
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-grid img { height: 300px; }
