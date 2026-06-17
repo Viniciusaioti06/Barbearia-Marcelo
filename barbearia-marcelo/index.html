@@ -4,25 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Barbeiro Marcelo | Professional Barber</title>
-  <meta name="description" content="Barbeiro Marcelo - cortes, barba, sobrancelha, hidratação e combos em Fortaleza. Agende seu horário pelo WhatsApp." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Barbeiro Marcelo - cortes, barba, sobrancelha, hidratação e combos em Fortaleza. Agende seu horário pelo WhatsApp ou Fresha." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23c9a45c'/><text x='50%' y='54%' dominant-baseline='middle' text-anchor='middle' font-family='serif' font-weight='700' font-size='15' fill='%23080808'>BM</text></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="header" id="header">
-    <nav class="navbar">
-      <a href="#inicio" class="brand">
-        <img src="assets/imagens/logo.jpeg" alt="Logo Barbeiro Marcelo">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a href="#inicio" class="brand" aria-label="Barbeiro Marcelo — Início">
+        <img src="assets/imagens/logo.jpeg" alt="Logo Barbeiro Marcelo" width="50" height="50" />
         <span>Barbeiro Marcelo</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="navMenu">
         <span></span><span></span><span></span>
       </button>
 
-      <ul class="nav-menu" id="navMenu">
+      <ul class="nav-menu" id="navMenu" role="list">
         <li><a href="#inicio">Início</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -30,131 +34,218 @@
         <li><a href="#localizacao">Localização</a></li>
       </ul>
 
-      <a class="btn btn-small" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank">Agendar</a>
+      <a class="btn btn-small" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank" rel="noopener noreferrer">Agendar</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="inicio">
-      <div class="hero-overlay"></div>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-labelledby="hero-heading">
+      <div class="hero-overlay" aria-hidden="true"></div>
       <div class="hero-content reveal">
-        <img class="hero-logo" src="assets/imagens/logo.jpeg" alt="Barbeiro Marcelo Professional Barber">
-        <p class="eyebrow">Desde 2017 • Fortaleza - CE</p>
-        <h1>Estilo, tradição e cuidado em cada detalhe.</h1>
+        <img class="hero-logo" src="assets/imagens/logo.jpeg" alt="Barbeiro Marcelo Professional Barber" width="200" height="200" />
+        <p class="eyebrow">Desde 2017 · Fortaleza — CE</p>
+        <h1 id="hero-heading">Estilo, tradição e<br>cuidado em cada detalhe.</h1>
         <p class="hero-text">Corte, barba, sobrancelha, penteado e tratamentos para quem busca um visual alinhado e atendimento profissional.</p>
         <div class="hero-actions">
-          <a class="btn" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank">Agendar</a>
+          <a class="btn btn-shimmer" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank" rel="noopener noreferrer">
+            Agendar agora
+          </a>
           <a class="btn btn-outline" href="#servicos">Ver serviços</a>
         </div>
       </div>
     </section>
 
-    <section class="stats section-dark">
-      <div class="stat reveal"><strong>+8</strong><span>anos de experiência</span></div>
-      <div class="stat reveal"><strong>Premium</strong><span>ambiente climatizado</span></div>
-      <div class="stat reveal"><strong>100%</strong><span>atendimento personalizado</span></div>
+    <!-- STATS -->
+    <section class="stats section-dark" aria-label="Destaques da barbearia">
+      <div class="stat reveal">
+        <strong>+8</strong>
+        <span>anos de experiência</span>
+      </div>
+      <div class="stat reveal">
+        <strong>Premium</strong>
+        <span>ambiente climatizado</span>
+      </div>
+      <div class="stat reveal">
+        <strong>100%</strong>
+        <span>atendimento personalizado</span>
+      </div>
     </section>
 
-    <section class="section about" id="sobre">
+    <!-- SOBRE -->
+    <section class="section about" id="sobre" aria-labelledby="sobre-heading">
       <div class="container grid-2">
         <div class="about-text reveal">
           <p class="section-tag">Sobre</p>
-          <h2>Barbearia com personalidade, conforto e acabamento profissional.</h2>
+          <h2 id="sobre-heading">Barbearia com personalidade, conforto e acabamento profissional.</h2>
           <p>O Barbeiro Marcelo une a barbearia clássica com um atendimento moderno, focado em acabamento, cuidado e experiência. Um espaço feito para quem valoriza estilo, conversa boa e resultado de qualidade.</p>
           <div class="about-card">
-            <span>📍</span>
-            <p>Av. Godofredo Maciel, 4015, loja B, Fortaleza - CE</p>
+            <span aria-hidden="true">📍</span>
+            <p>Av. Godofredo Maciel, 4015, loja B, Fortaleza — CE</p>
           </div>
         </div>
         <div class="about-image reveal">
-          <img src="assets/imagens/bancada-01.jpeg" alt="Ambiente interno da barbearia">
+          <img src="assets/imagens/bancada-01.jpeg" alt="Ambiente interno da Barbearia Marcelo" loading="lazy" width="560" height="500" />
         </div>
       </div>
     </section>
 
-    <section class="section services section-gray" id="servicos">
+    <!-- SERVIÇOS -->
+    <section class="section services section-gray" id="servicos" aria-labelledby="servicos-heading">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-tag">Serviços</p>
-          <h2>Escolha seu serviço</h2>
+          <h2 id="servicos-heading">Escolha seu serviço</h2>
           <p>Valores e serviços principais da Barbearia Marcelo.</p>
         </div>
 
         <div class="cards-grid">
-          <article class="service-card reveal"><h3>Corte</h3><span>30 min</span><p>Inclui lavagem e finalização.</p><strong>R$ 40</strong></article>
-          <article class="service-card reveal"><h3>Barba</h3><span>30 min</span><p>Toalha quente, cuidado e acabamento.</p><strong>R$ 40</strong></article>
-          <article class="service-card reveal"><h3>Corte + Sobrancelha</h3><span>30 min</span><p>Combo prático para renovar o visual.</p><strong>R$ 50</strong></article>
-          <article class="service-card reveal"><h3>Corte + Barba</h3><span>30 min</span><p>Visual completo com corte e barba.</p><strong>R$ 70</strong></article>
-          <article class="service-card reveal"><h3>Pai e Filho</h3><span>1h</span><p>Experiência completa para pai e filho.</p><strong>R$ 70</strong></article>
-          <article class="service-card reveal"><h3>Corte + Barba + Sobrancelha</h3><span>30 min</span><p>Combo completo para sair no padrão.</p><strong>R$ 80</strong></article>
-          <article class="service-card reveal"><h3>Só o pezinho</h3><span>10 min</span><p>Acabamento rápido e preciso.</p><strong>R$ 15</strong></article>
-          <article class="service-card reveal"><h3>Penteado</h3><span>30 min</span><p>Finalização sob medida para seu estilo.</p><strong>R$ 20</strong></article>
-          <article class="service-card reveal"><h3>Barba express só máquina</h3><span>15 min</span><p>Praticidade para manter o visual alinhado.</p><strong>R$ 25</strong></article>
-          <article class="service-card reveal"><h3>Hidratação Wella Invigo</h3><span>30 min</span><p>Tratamento capilar para brilho e maciez.</p><strong>R$ 50</strong></article>
+          <article class="service-card reveal">
+            <h3>Corte</h3>
+            <span>30 min</span>
+            <p>Inclui lavagem e finalização.</p>
+            <strong>R$ 40</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Barba</h3>
+            <span>30 min</span>
+            <p>Toalha quente, cuidado e acabamento.</p>
+            <strong>R$ 40</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Corte + Sobrancelha</h3>
+            <span>30 min</span>
+            <p>Combo prático para renovar o visual.</p>
+            <strong>R$ 50</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Corte + Barba</h3>
+            <span>30 min</span>
+            <p>Visual completo com corte e barba.</p>
+            <strong>R$ 70</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Pai e Filho</h3>
+            <span>1h</span>
+            <p>Experiência completa para pai e filho.</p>
+            <strong>R$ 70</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Corte + Barba + Sobrancelha</h3>
+            <span>30 min</span>
+            <p>Combo completo para sair no padrão.</p>
+            <strong>R$ 80</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Só o pezinho</h3>
+            <span>10 min</span>
+            <p>Acabamento rápido e preciso.</p>
+            <strong>R$ 15</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Penteado</h3>
+            <span>30 min</span>
+            <p>Finalização sob medida para seu estilo.</p>
+            <strong>R$ 20</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Barba express só máquina</h3>
+            <span>15 min</span>
+            <p>Praticidade para manter o visual alinhado.</p>
+            <strong>R$ 25</strong>
+          </article>
+          <article class="service-card reveal">
+            <h3>Hidratação Wella Invigo</h3>
+            <span>30 min</span>
+            <p>Tratamento capilar para brilho e maciez.</p>
+            <strong>R$ 50</strong>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section promo">
+    <!-- PROMOÇÃO -->
+    <section class="section promo" aria-label="Promoção especial">
       <div class="container promo-box reveal">
         <div>
           <p class="section-tag">Promoção</p>
           <h2>Corte + hidratação + penteado</h2>
           <p>De R$ 110 por apenas <strong>R$ 85</strong>. Ideal para renovar o visual com cuidado completo.</p>
         </div>
-        <a class="btn" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank">Agendar</a>
+        <a class="btn btn-shimmer" href="https://www.fresha.com/pt/a/barbeiro-marcelo-ceara-avenida-godofredo-maciel-add8kswj/booking?menu=true&pId=977230&dppub=true&employeeId=2487781&cartId=b8b017c0-6495-44c1-91f3-c92af5c47bef" target="_blank" rel="noopener noreferrer">
+          Agendar agora
+        </a>
       </div>
     </section>
 
-
-
-    <section class="section gallery" id="galeria">
+    <!-- GALERIA -->
+    <section class="section gallery" id="galeria" aria-labelledby="galeria-heading">
       <div class="container">
         <div class="section-heading reveal">
           <p class="section-tag">Galeria</p>
-          <h2>Ambiente da barbearia</h2>
+          <h2 id="galeria-heading">Ambiente da barbearia</h2>
         </div>
         <div class="gallery-grid">
-          <img class="reveal" src="assets/imagens/ambiente-cadeira.png" alt="Cadeira da barbearia">
-          <img class="reveal" src="assets/imagens/fachada.png" alt="Fachada da barbearia">
-          <img class="reveal" src="assets/imagens/fachada-moto.png" alt="Entrada da barbearia">
-          <img class="reveal" src="assets/imagens/bancada-02.jpeg" alt="Bancada da barbearia">
+          <img class="reveal" src="assets/imagens/ambiente-cadeira.png" alt="Cadeira da barbearia" loading="lazy" width="320" height="340" />
+          <img class="reveal" src="assets/imagens/fachada.png" alt="Fachada da barbearia" loading="lazy" width="320" height="340" />
+          <img class="reveal" src="assets/imagens/fachada-moto.png" alt="Entrada da barbearia" loading="lazy" width="320" height="340" />
+          <img class="reveal" src="assets/imagens/bancada-02.jpeg" alt="Bancada da barbearia" loading="lazy" width="320" height="340" />
         </div>
       </div>
     </section>
 
-    <section class="section location section-gray" id="localizacao">
+    <!-- LOCALIZAÇÃO -->
+    <section class="section location section-gray" id="localizacao" aria-labelledby="localizacao-heading">
       <div class="container grid-2">
         <div class="reveal">
           <p class="section-tag">Localização</p>
-          <h2>Venha conhecer a Barbearia Marcelo</h2>
-          <p>Av. Godofredo Maciel, 4015, loja B, Fortaleza - CE, 60711-495.</p>
-          <ul class="hours">
-            <li><span>Segunda</span><strong>14:00 - 20:00</strong></li>
-            <li><span>Terça a sexta</span><strong>09:00 - 20:00</strong></li>
-            <li><span>Sábado</span><strong>09:00 - 18:00</strong></li>
-            <li><span>Domingo</span><strong>Fechado</strong></li>
+          <h2 id="localizacao-heading">Venha conhecer a Barbearia Marcelo</h2>
+          <p>Av. Godofredo Maciel, 4015, loja B, Fortaleza — CE, 60711-495.</p>
+
+          <ul class="hours" aria-label="Horários de funcionamento">
+            <li data-day="segunda">
+              <span>Segunda</span>
+              <strong>14:00 – 20:00</strong>
+            </li>
+            <li data-day="terca">
+              <span>Terça a sexta</span>
+              <strong>09:00 – 20:00</strong>
+            </li>
+            <li data-day="sabado">
+              <span>Sábado</span>
+              <strong>09:00 – 18:00</strong>
+            </li>
+            <li>
+              <span>Domingo</span>
+              <strong style="color:#999">Fechado</strong>
+            </li>
           </ul>
-          <div class="hero-actions">
-            <a class="btn" href="https://maps.google.com/maps?ftid=0x7c74d581077898d:0x62efa9a86559bc9f" target="_blank">Abrir no Maps</a>
-            <a class="btn btn-outline dark" href="https://www.instagram.com/barbeiroomarcelo" target="_blank">Instagram</a>
-            <a class="btn" href="https://api.whatsapp.com/send?phone=5585989476763" target="_blank">WhatsApp</a>
+
+          <div class="hero-actions" style="justify-content:flex-start;">
+            <a class="btn" href="https://maps.google.com/maps?ftid=0x7c74d581077898d:0x62efa9a86559bc9f" target="_blank" rel="noopener noreferrer">Abrir no Maps</a>
+            <a class="btn btn-outline dark" href="https://www.instagram.com/barbeiroomarcelo" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="btn" href="https://api.whatsapp.com/send?phone=5585989476763" target="_blank" rel="noopener noreferrer">WhatsApp</a>
           </div>
         </div>
+
         <div class="map-card reveal">
-          <img src="assets/imagens/fachada.png" alt="Fachada da Barbearia Marcelo">
+          <img src="assets/imagens/fachada.png" alt="Fachada da Barbearia Marcelo" loading="lazy" width="560" height="500" />
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-    <img src="assets/imagens/logo.jpeg" alt="Logo Barbeiro Marcelo">
-    <p>Barbeiro Marcelo • Professional Barber • Desde 2017</p>
-    <p>Desenvolvido para apresentação por VR Web Design.</p>
+    <img src="assets/imagens/logo.jpeg" alt="Logo Barbeiro Marcelo" width="100" height="100" />
+    <p>Barbeiro Marcelo · Professional Barber · Desde 2017</p>
+    <p>Desenvolvido por <a href="https://portifolio-vrss.netlify.app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);font-weight:700;">VR Web Design</a></p>
   </footer>
 
-  <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5585989476763&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" aria-label="Agendar pelo WhatsApp">✆</a>
+  <a class="whatsapp-float" href="https://api.whatsapp.com/send?phone=5585989476763&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio." target="_blank" rel="noopener noreferrer" aria-label="Agendar pelo WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.85L.057 23.177a.75.75 0 00.919.919l5.344-1.47A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.895 0-3.668-.524-5.178-1.434l-.36-.214-3.742 1.03 1.043-3.631-.235-.374A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
